@@ -1,22 +1,28 @@
-import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Product from "./pages/Product/Product";
-import Products from "./pages/Products/Products";
-import "./app.scss";
+import Main from "./components/Navbar/Main";
+import Home from "./components/Home/Home";
+import Product from "./components/Product/Product";
+import Products from "./components/Products/Products";
 
+import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
+import Contact from "./components/Contact/Contact";
+
+import { AppProvider } from "./components/Navbar/context";
 const Layout = () => {
   return (
     <div className="app">
-      <Navbar />
+      <AppProvider>
+        <Main />
+      </AppProvider>
       <Outlet />
+      <Contact />
       <Footer />
     </div>
   );
 };
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -32,6 +38,14 @@ const router = createHashRouter([
       {
         path: "/product/:id",
         element: <Product />,
+      },
+      {
+        path: "/featured-products",
+        element: <FeaturedProducts type="featured" />,
+      },
+      {
+        path: "/trending-products",
+        element: <FeaturedProducts type="trending" />,
       },
     ],
   },

@@ -9,10 +9,11 @@ const FeaturedProducts = ({ type }) => {
   );
 
   return (
-    <div className="featuredProducts">
-      <div className="top">
-        <h1>{type} products</h1>
-        <p>
+    <div className="container">
+      <div className="row">
+
+        <h1 className="col-12 col-md-6">{type} products</h1>
+        <p className="col-12 col-md-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
@@ -20,7 +21,7 @@ const FeaturedProducts = ({ type }) => {
           suspendisse ultrices gravida. Risus commodo viverra maecenas.
         </p>
       </div>
-      <div className="bottom">
+      <div className="row">
         {error
           ? "Something went wrong!"
           : loading

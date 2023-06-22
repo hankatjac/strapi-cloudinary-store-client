@@ -1,34 +1,31 @@
-.card{
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.card-show {
+
   margin-bottom: 50px;
 
-  .image{
-    width: 100%;
+  .image {
+
     height: 400px;
     overflow: hidden;
     position: relative;
 
-    &:hover{
-      .secondImg{
+    &:hover {
+      .secondImg {
         z-index: 2;
       }
     }
 
-    img{
-      width: 100%;
+    img {
+     
       height: 100%;
       object-fit: cover;
       position: absolute;
     }
 
-    .mainImg{
+    .mainImg {
       z-index: 1;
     }
 
-    span{
+    span {
       position: absolute;
       top: 5px;
       left: 5px;
@@ -41,20 +38,20 @@
     }
   }
 
-  h2{
+  h2 {
     font-size: 16px;
     font-weight: 400;
   }
 
-  .prices{
+  .prices {
     display: flex;
     gap: 20px;
 
-    h3{
+    h3 {
       font-size: 18px;
       font-weight: 500;
 
-      &:first-child{
+      &:first-child {
         color: gray;
         text-decoration: line-through;
       }
