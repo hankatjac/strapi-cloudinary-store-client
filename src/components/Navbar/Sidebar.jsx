@@ -6,6 +6,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
@@ -31,10 +32,10 @@ const Sidebar = () => {
                   {links.map((link, index) => {
                     const { url, icon, label } = link;
                     return (
-                      <a key={index} href={url}>
+                      <Link key={index} to={url}>
                         {icon}
                         {label}
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>
