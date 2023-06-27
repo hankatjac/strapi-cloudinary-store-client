@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-12 col-md-3 item">
             <h1>Categories</h1>
             <Link className="link" to="/products/1">
-              Bloouse
+              Blouse
             </Link>
             <Link className="link" to="/products/2">
               Skirt
