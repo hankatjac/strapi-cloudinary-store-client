@@ -8,8 +8,14 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
+import { useGlobalContext } from "../../context";
 
 const Product = () => {
+  const { closeSubmenu } = useGlobalContext();
+
+  const handleSubmenu = (e) => {
+    closeSubmenu();
+  };
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
@@ -18,7 +24,7 @@ const Product = () => {
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   return (
-    <div className="product">
+    <div className="product" onMouseOver={handleSubmenu}>
       {loading ? (
         "loading"
       ) : (
@@ -26,15 +32,15 @@ const Product = () => {
           <div className="container">
             <div className="row gap-2">
               <div className="col-12 col-md-3">
-                <div className="gap-1">
+                <div>
                   <img
-                    className="col-6 col-sm-12 img-sel"
+                    className="col-6 col-md-12 img-sel"
                     src={data?.attributes?.img?.data?.attributes?.url}
                     alt=""
                     onClick={(e) => setSelectedImg("img")}
                   />
                   <img
-                    className="col-6 col-sm-12 img-sel"
+                    className="col-6 col-md-12 img-sel"
                     src={data?.attributes?.img2?.data?.attributes?.url}
                     alt=""
                     onClick={(e) => setSelectedImg("img2")}

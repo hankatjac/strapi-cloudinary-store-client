@@ -2,14 +2,20 @@ import React from "react";
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 import useFetch from "../../hooks/useFetch";
+import { useGlobalContext } from "../../context";
 
 const FeaturedProducts = ({ type }) => {
+  const { closeSubmenu } = useGlobalContext();
+
+  const handleSubmenu = (e) => {
+    closeSubmenu();
+  };
   const { data, loading, error } = useFetch(
     `/products?populate=*&[filters][type][$eq]=${type}`
   );
 
   return (
-    <div className="container">
+    <div className="container" onMouseOver={handleSubmenu}>
       <div className="row">
 
         <h1 className="col-12 col-md-6">{type} products</h1>

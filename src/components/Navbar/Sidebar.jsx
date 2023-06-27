@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../../context";
 import sublinks from "./data";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -32,7 +32,7 @@ const Sidebar = () => {
                   {links.map((link, index) => {
                     const { url, icon, label } = link;
                     return (
-                      <Link key={index} to={url}>
+                      <Link key={index} to={url} onClick={closeSidebar}>
                         {icon}
                         {label}
                       </Link>

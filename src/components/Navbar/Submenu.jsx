@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 
 const Submenu = () => {
