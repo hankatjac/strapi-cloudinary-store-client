@@ -1,5 +1,5 @@
 import React from "react";
-import "./List.scss";
+// import "./List.scss";
 import Card from "../Card/Card";
 import useFetch from "../../hooks/useFetch";
 
@@ -11,10 +11,12 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
   );
 
   return (
-    <div className="list">
-      {loading
-        ? "loading"
-        : data?.map((item) => <Card item={item} key={item.id} />)}
+    <div className="container">
+      <div className="row">
+        {loading
+          ? "loading"
+          : data?.map((item) => <Card item={item} key={item.id} />)}
+      </div>
     </div>
   );
 };
