@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/strapi-cloudinary-store-client/static/css/main.0b30a42d.css",
-    "main.js": "/strapi-cloudinary-store-client/static/js/main.6609886d.js",
+    "main.css": "/strapi-cloudinary-store-client/static/css/main.ed3fa3ff.css",
+    "main.js": "/strapi-cloudinary-store-client/static/js/main.720795b4.js",
     "static/media/payment.png": "/strapi-cloudinary-store-client/static/media/payment.c25c303da7570caf63c8.png",
     "index.html": "/strapi-cloudinary-store-client/index.html",
-    "main.0b30a42d.css.map": "/strapi-cloudinary-store-client/static/css/main.0b30a42d.css.map",
-    "main.6609886d.js.map": "/strapi-cloudinary-store-client/static/js/main.6609886d.js.map"
+    "main.ed3fa3ff.css.map": "/strapi-cloudinary-store-client/static/css/main.ed3fa3ff.css.map",
+    "main.720795b4.js.map": "/strapi-cloudinary-store-client/static/js/main.720795b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b30a42d.css",
-    "static/js/main.6609886d.js"
+    "static/css/main.ed3fa3ff.css",
+    "static/js/main.720795b4.js"
   ]
 }
