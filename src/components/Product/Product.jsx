@@ -13,9 +13,6 @@ import { useGlobalContext } from "../../context";
 const Product = () => {
   const { closeSubmenu } = useGlobalContext();
 
-  const handleSubmenu = (e) => {
-    closeSubmenu();
-  };
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
@@ -24,7 +21,7 @@ const Product = () => {
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   return (
-    <div className="product" onMouseOver={handleSubmenu}>
+    <div className="product" onMouseOver={closeSubmenu}>
       {loading ? (
         "loading"
       ) : (

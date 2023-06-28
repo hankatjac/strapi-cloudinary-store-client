@@ -8,10 +8,6 @@ import { useGlobalContext } from "../../context";
 
 const Products = () => {
   const { closeSubmenu } = useGlobalContext();
-
-  const handleSubmenu = (e) => {
-    closeSubmenu();
-  };
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState("asc");
@@ -33,7 +29,7 @@ const Products = () => {
   };
 
   return (
-    <div className="products" onMouseOver={handleSubmenu}>
+    <div className="products" onMouseOver={closeSubmenu}>
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-4">

@@ -7,17 +7,13 @@ import { useGlobalContext } from "../../context";
 const FeaturedProducts = ({ type }) => {
   const { closeSubmenu } = useGlobalContext();
 
-  const handleSubmenu = (e) => {
-    closeSubmenu();
-  };
   const { data, loading, error } = useFetch(
     `/products?populate=*&[filters][type][$eq]=${type}`
   );
 
   return (
-    <div className="container" onMouseOver={handleSubmenu}>
+    <div className="container" onMouseOver={closeSubmenu}>
       <div className="row">
-
         <h1 className="col-12 col-md-6">{type} products</h1>
         <p className="col-12 col-md-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

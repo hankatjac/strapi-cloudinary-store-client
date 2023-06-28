@@ -6,12 +6,8 @@ import { useGlobalContext } from "../../context";
 const Home = () => {
   const { closeSubmenu } = useGlobalContext();
 
-  const handleSubmenu = (e) => {
-    closeSubmenu();
-  };
-  
   return (
-    <div className="home" onMouseOver={handleSubmenu}>
+    <div className="home" onMouseOver={closeSubmenu}>
       <Slider />
       <Categories />
     </div>
