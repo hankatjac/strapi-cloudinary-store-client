@@ -26,7 +26,7 @@ const Slider = () => {
         <img src={data[1]} alt="" />
         <img src={data[2]} alt="" />
       </div>
-      <div className="icons">
+      <div className="arrow">
         <div className="icon" onClick={prevSlide}>
           <WestOutlinedIcon />
         </div>
