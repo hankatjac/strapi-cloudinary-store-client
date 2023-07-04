@@ -12,7 +12,7 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row justify-content-center">
         {loading
           ? "loading"
           : data?.map((item) => <Card item={item} key={item.id} />)}
